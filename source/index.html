@@ -2,16 +2,48 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header">
+      <span class="main-header__logo logo">
+        <picture>
+          <img src="" width="32" height="36" alt="Логотип «Drink2go»">
+        </picture>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a href="#">Главная</a></li>
+            <li class="site-list__item"><a href="#">Каталог</a></li>
+            <li class="site-list__item"><a href="#">Доставка</a></li>
+            <li class="site-list__item"><a href="#">О нас</a></li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <svg class="user-list__login-icon" width="16" height="16">
+                <use href="img/sprite.svg#icon-login"></use>
+              </svg>
+              <a href="#"></a>
+            </li>
+            <li class="user-list__item">
+              <svg class="user-list__login-icon" width="16" height="16">
+                <use href="img/sprite.svg#icon-login"></use>
+              </svg>
+              <a href="#"></a>
+            </li>
+          </ul>
+          <button class="main-nav__burger" type="button">
+            <span class="visually-hidden">Меню</span>
+            <span class="main-nav__burger-icon"></span>
+          </button>
+        </nav>
+      </span>
+    </header>
     <main>
-      <h1>Страница для старта</h1>
+      <h1>Drink2go</h1>
     </main>
   </body>
 </html>
