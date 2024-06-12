@@ -12,7 +12,9 @@
       <div class="main-header__wrapper container">
         <span class="main-header__logo logo">
           <picture>
-            <img src="" width="32" height="36" alt="Логотип «Drink2go»">
+            <source width="170" height="36" media="(min-width: 1440px)" srcset="images/logo-full.svg" type="image/svg+xml">
+            <source width="82" height="36" media="(min-width: 768px)" srcset="images/logo-short.svg" type="image/svg+xml">
+            <img src="images/logo-symbol.svg" width="32" height="36" alt="Логотип «Drink2go».">
           </picture>
           <p class="logo__text">Интернет-магазин кофейных напитков</p>
         </span>
@@ -34,18 +36,18 @@
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__login-icon" width="16" height="16" aria-labelledby="icon-login">
+                <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-login">
                   <title id="icon-login">Войти</title>
-                  <use href="img/sprite.svg#icon-login"></use>
+                  <use href="icons/stack.svg#user-icon"></use>
                 </svg>
                 <span>Войти</span>
               </a>
             </li>
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__cart-icon" width="16" height="16" aria-labelledby="icon-cart">
+                <svg class="user-list__cart-icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-cart">
                   <title id="icon-cart">Корзина</title>
-                  <use href="img/sprite.svg#icon-login"></use>
+                  <use href="icons/stack.svg#cart-icon"></use>
                 </svg>
                 <span>Корзина</span>
               </a>
@@ -63,12 +65,22 @@
       <section class="hero">
         <div class="hero__slider slider">
           <button class="slider__navigation slider__navigation--prev">
+            <svg class="slider__navigation-icon" width="11" height="20" viewBox="0 0 11 20">
+              <use href="icons/stack.svg#arrow-icon"></use>
+            </svg>
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
           <div class="slider__wrapper container">
             <ul class="slider__list">
               <li class="slider__item slider__item--active product-card product-card--promo">
-                <img class="product-card__image" src="" width="280" height="280" alt="Изображение товара">
+                <picture>
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp, images/flat-white-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp, images/flat-white-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/flat-white-mobile@1x.webp, images/flat-white-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png, images//flat-white-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h2 class="product-card__title title title--big">
                     <span class="title__sub-title">Новинка!</span>
@@ -85,6 +97,14 @@
                 </div>
               </li>
               <li class="slider__item product-card product-card--promo">
+                <picture>
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp, images/espresso-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp, images/espresso-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/espresso-mobile@1x.webp, images/espresso-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png, images/espresso-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/espresso-mobile@1x.png" srcset="images/fespresso-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                </picture>
                 <img class="product-card__image" src="" width="280" height="280" alt="Изображение товара">
                 <div class="product-card__info">
                   <h2 class="product-card__title title title--big">
@@ -102,7 +122,14 @@
                 </div>
               </li>
               <li class="slider__item product-card product-card--promo">
-                <img class="product-card__image" src="" width="280" height="280" alt="Изображение товара">
+                <picture>
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp, images/lavender-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp, images/lavender-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/lavender-mobile@1x.webp, images/lavender-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png, images/lavender-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png, images/lavender-tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h2 class="product-card__title title title--big">
                     <span class="title__sub-title">Новинка!</span>
@@ -120,7 +147,10 @@
               </li>
             </ul>
           </div>
-          <button class="slider__navigation slider__navigation--туче">
+          <button class="slider__navigation slider__navigation--next">
+            <svg class="slider__navigation-icon" width="11" height="20" viewBox="0 0 11 20">
+              <use href="icons/stack.svg#arrow-icon"></use>
+            </svg>
             <span class="visually-hidden">Следующий слайд</span>
           </button>
           <ul class="slider__pagination">
@@ -150,31 +180,31 @@
           </h2>
           <ul class="features__list">
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56">
-                <use href="img/sprite.svg#icon-login"></use>
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="speed">
+                <use href="icons/stack.svg#clock-icon"></use>
               </svg>
-              <h3 class="features__item-title">Скорость</h3>
+              <h3 class="features__item-title" id="speed">Скорость</h3>
               <p class="features__item-descriptions">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56">
-                <use href="img/sprite.svg#icon-login"></use>
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="convenience">
+                <use href="icons/stack.svg#pocket-icon"></use>
               </svg>
-              <h3 class="features__item-title">Удобство</h3>
+              <h3 class="features__item-title" id="convenience">Удобство</h3>
               <p class="features__item-descriptions">Легко помещается и в карман, и в маленькую сумочку</p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56">
-                <use href="img/sprite.svg#icon-login"></use>
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="cheerfulness">
+                <use href="icons/stack.svg#lightning-icon"></use>
               </svg>
-              <h3 class="features__item-title">Бодрость</h3>
+              <h3 class="features__item-title" id="cheerfulness">Бодрость</h3>
               <p class="features__item-descriptions">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56">
-                <use href="img/sprite.svg#icon-login"></use>
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="eco-friendly">
+                <use href="icons/stack.svg#leaf-icon"></use>
               </svg>
-              <h3 class="features__item-title">Экологичность</h3>
+              <h3 class="features__item-title" id="eco-friendly">Экологичность</h3>
               <p class="features__item-descriptions">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
           </ul>
@@ -294,7 +324,10 @@
             </div>
             <ul class="catalog__products-cards products-cards">
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-1@1x.webp, images/coffee-can-1@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-1@1x.jpg" srcset="images/coffee-can-1@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -307,7 +340,10 @@
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-2@1x.webp, images/coffee-can-2@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-2@2x.jpg" srcset="images/coffee-can-2@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -320,7 +356,10 @@
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-3@1x.webp, images/coffee-can-3@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-3@1x.jpg" srcset="images/coffee-can-3@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -333,7 +372,10 @@
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-4@1x.webp, images/coffee-can-4@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-4@1x.jpg" srcset="images/coffee-can-4@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -346,7 +388,10 @@
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-5@1x.webp, images/coffee-can-5@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-5@1x.jpg" srcset="images/coffee-can-5@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -359,7 +404,10 @@
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <img class="product-card__image" src="" width="130" height="188" alt="Изображение товара">
+                <picture>
+                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-6@1x.webp, images/coffee-can-6@2x.webp 2x">
+                  <img class="product-card__image" src="images/coffee-can-6@1x.jpg" srcset="images/coffee-can-6@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                </picture>
                 <div class="product-card__info">
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -392,14 +440,25 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <img class="map__image" src="" width="100%" height="420" alt="Карта">
+        <picture>
+          <source width="1440" height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x">
+          <source width="768" height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x">
+          <source width="320" height="420" type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x">
+          <source width="1440" height="540" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x">
+          <source width="768" height="480" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x">
+          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="420" alt="Карта">
+        </picture>
       </section>
       <footer class="main-footer">
         <div clas="main-footer__wrapper container">
           <div class="main-footer__group">
-            <span class="main-footer__logo logo">
+            <span class="main-footer__logo logo logo--footer">
               <picture>
                 <img src="" width="82" height="36" alt="Логотип «Drink2go»">
+              </picture>
+              <picture>
+                <source width="170" height="36" media="(min-width: 768px)" srcset="images/logo-full.svg" type="image/svg+xml">
+                <img src="images/logo-short.svg" width="82" height="36" alt="Логотип «Drink2go».">
               </picture>
               <p class="logo__text">Интернет-магазин кофейных напитков</p>
             </span>
@@ -408,7 +467,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Вконтакте</span>
                   <svg class="social__icon" width="20" height="20" viewBox="0 0 28 22" aria-hidden="true" focusable="false">
-                    <use href="images/icons/stack.svg#vkontakte"></use>
+                    <use href="icons/stack.svg#vk"></use>
                   </svg>
                 </a>
               </li>
@@ -416,7 +475,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Пинтерест</span>
                   <svg class="social__icon" width="22" height="22" viewBox="0 0 28 22" aria-hidden="true" focusable="false">
-                    <use href="images/icons/stack.svg#youtube"></use>
+                    <use href="icons/stack.svg#pinterest"></use>
                   </svg>
                 </a>
               </li>
@@ -424,7 +483,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Одноклассники</span>
                   <svg class="social__icon" width="20" height="20" viewBox="0 0 28 22" aria-hidden="true" focusable="false">
-                    <use href="images/icons/stack.svg#telegram"></use>
+                    <use href="icons/stack.svg#ok"></use>
                   </svg>
                 </a>
               </li>
@@ -476,9 +535,10 @@
           </div>
           <div class="main-footer__copyright copyright">
             <span class="copyright__text">Разработано в</span>
-            <a class="copyright__link" href="#">HTML Academy
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+              <span class="visually-hidden">Перейти на сайт</span>
               <svg class="social__icon" width="28" height="22" viewBox="0 0 28 22" aria-hidden="true" focusable="false">
-                <use href="images/icons/stack.svg#telegram"></use>
+                <use href="icons/stack.svg#academy-logo"></use>
               </svg>
             </a>
           </div>
