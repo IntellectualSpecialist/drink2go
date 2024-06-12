@@ -64,7 +64,7 @@
       <h1 class="visually-hidden">Drink2go</h1>
       <section class="hero">
         <div class="hero__slider slider">
-          <button class="slider__navigation slider__navigation--prev">
+          <button class="slider__navigation slider__navigation--prev" type="button">
             <svg class="slider__navigation-icon" width="11" height="20" viewBox="0 0 11 20">
               <use href="icons/stack.svg#arrow-icon"></use>
             </svg>
@@ -88,7 +88,7 @@
                   </h2>
                   <p class="product-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                   <footer class="product-card__footer">
-                    <p class="product-card__full-price full-price full-price">
+                    <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">259&#8381;</del>
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
@@ -105,7 +105,6 @@
                   <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
                   <img class="product-card__image" src="images/espresso-mobile@1x.png" srcset="images/fespresso-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
                 </picture>
-                <img class="product-card__image" src="" width="280" height="280" alt="Изображение товара">
                 <div class="product-card__info">
                   <h2 class="product-card__title title title--big">
                     <span class="title__sub-title">Новинка!</span>
@@ -113,7 +112,7 @@
                   </h2>
                   <p class="product-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                   <footer class="product-card__footer">
-                    <p class="product-card__full-price full-price full-price">
+                    <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">285&#8381;</del>
                       <span class="full-price__new-price">265&#8381;</span>
                     </p>
@@ -137,7 +136,7 @@
                   </h2>
                   <p class="product-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                   <footer class="product-card__footer">
-                    <p class="product-card__full-price full-price full-price">
+                    <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">395&#8381;</del>
                       <span class="full-price__new-price">375&#8381;</span>
                     </p>
@@ -147,7 +146,7 @@
               </li>
             </ul>
           </div>
-          <button class="slider__navigation slider__navigation--next">
+          <button class="slider__navigation slider__navigation--next" type="button">
             <svg class="slider__navigation-icon" width="11" height="20" viewBox="0 0 11 20">
               <use href="icons/stack.svg#arrow-icon"></use>
             </svg>
@@ -155,17 +154,17 @@
           </button>
           <ul class="slider__pagination">
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button">
+              <button class="slider__pagination-button" type="button">
                 <span class="visually-hidden">1</span>
               </button>
             </li>
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button">
+              <button class="slider__pagination-button" type="button">
                 <span class="visually-hidden">2</span>
               </button>
             </li>
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button">
+              <button class="slider__pagination-button" type="button">
                 <span class="visually-hidden">3</span>
               </button>
             </li>
@@ -313,14 +312,12 @@
           </form>
           <div class="catalog__products">
             <div class="catalog__sorting sorting">
-              <label class="sorting__field">
-                <span class="sorting__label title-form">Сортировка</span>
+                <label class="sorting__label title-form" for="products-sorting">Сортировка</label>
                 <select class="sorting__control" name="products-sorting" id="products-sorting">
                   <option value="default">По умолчанию</option>
                   <option value="expensive">Сначала дорогое</option>
                   <option value="cheap">Сначала дешевое</option>
                 </select>
-              </label>
             </div>
             <ul class="catalog__products-cards products-cards">
               <li class="products-cards__item product-card">
@@ -335,7 +332,7 @@
                     <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
@@ -351,7 +348,7 @@
                     <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
@@ -367,7 +364,7 @@
                     <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
@@ -383,7 +380,7 @@
                     <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
@@ -399,7 +396,7 @@
                     <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
@@ -412,28 +409,28 @@
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
-                    <p class="product-card__full-price full-price full-price">
+                    <p class="product-card__full-price full-price">
                       <span class="full-price__new-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon">В корзину</button>
+                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
                   </footer>
                 </div>
               </li>
             </ul>
             <div class="catalog__pagination pagination">
-              <button class="pagination__prev button button--secondary">Назад</button>
+              <a class="pagination__prev button button--secondary" href="#">Назад</a>
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a class="button button--secondary">1</a>
+                  <a class="button button--secondary" href="#">1</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="button button--secondary button--current">2</a>
+                  <a class="button button--secondary button--current" href="#">2</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="button button--secondary">3</a>
+                  <a class="button button--secondary" href="#">3</a>
                 </li>
               </ul>
-              <button class="pagination__next button button--secondary">Вперёд</button>
+              <a class="pagination__next button button--secondary" href="#">Вперёд</a>
             </div>
           </div>
         </div>
@@ -453,9 +450,6 @@
         <div clas="main-footer__wrapper container">
           <div class="main-footer__group">
             <span class="main-footer__logo logo logo--footer">
-              <picture>
-                <img src="" width="82" height="36" alt="Логотип «Drink2go»">
-              </picture>
               <picture>
                 <source width="170" height="36" media="(min-width: 768px)" srcset="images/logo-full.svg" type="image/svg+xml">
                 <img src="images/logo-short.svg" width="82" height="36" alt="Логотип «Drink2go».">
