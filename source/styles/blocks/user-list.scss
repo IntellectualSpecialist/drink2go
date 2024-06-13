@@ -1,0 +1,43 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-list__link {
+  @include nav-typography;
+  display: flex;
+  align-items: center;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.user-list__icon {
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}

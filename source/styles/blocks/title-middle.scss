@@ -1,0 +1,11 @@
+.title-middle {
+  margin: 0;
+  font-size: 18px;
+  line-height: 178%;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}

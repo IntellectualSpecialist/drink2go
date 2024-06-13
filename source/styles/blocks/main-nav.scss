@@ -1,0 +1,52 @@
+.main-nav {
+  display: flex;
+  align-items: start;
+  justify-content: right;
+  width: 100%;
+}
+
+.main-nav__logo {
+  margin-top: 12px;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 22px;
+    margin-right: 67px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+  }
+}
+
+.main-nav__site-list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    max-width: 455px;
+  }
+
+  &--active {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.main-nav__user-list {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.main-nav__burger {
+  margin-right: -20px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

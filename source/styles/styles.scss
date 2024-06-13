@@ -4,8 +4,33 @@
 @import "./common/global.scss";
 @import "./common/container.scss";
 @import "./common/visually-hidden.scss";
+@import "./common/mixins.scss";
 
 /* BLOCKS */
 @import "./blocks/page.scss";
-@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/burger.scss";
+@import "./blocks/title-big.scss";
+@import "./blocks/title-middle.scss";
+@import "./blocks/title-small.scss";
+@import "./blocks/full-price.scss";
+@import "./blocks/button.scss";
+@import "./blocks/radio.scss";
+@import "./blocks/switcher.scss";
+@import "./blocks/form-field.scss";
+@import "./blocks/sorting.scss";
+@import "./blocks/field.scss";
+@import "./blocks/range.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/form.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/user-list.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
 @import "./blocks/main-content.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/features.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/products-cards.scss";
+

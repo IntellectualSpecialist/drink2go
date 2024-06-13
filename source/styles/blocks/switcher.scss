@@ -1,0 +1,51 @@
+.switcher {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  margin: 0;
+  background-color: $base-grey;
+  border-radius: 12px;
+  border: 2px solid $base-grey;
+  cursor: pointer;
+  appearance: none;
+  transition: 0.2s ease-in;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $base-white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $alt-primary-lighter;
+    background-color: $alt-primary-opacity;
+  }
+
+  &:checked,
+  &:active {
+    border-color: $base-primary;
+    background-color: $base-primary;
+
+    &::before {
+      transform: translateX(18px);
+    }
+  }
+
+  &:disabled {
+    border-color: $alt-light-grey;
+    background-color: $alt-light-grey;
+
+    &:checked {
+      &::before {
+        background-color: $base-grey;
+      }
+    }
+  }
+}

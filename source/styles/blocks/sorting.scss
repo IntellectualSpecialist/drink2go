@@ -1,0 +1,30 @@
+.sorting__label {
+  margin-right: 8px;
+}
+
+.sorting__control {
+  position: relative;
+  width: 168px;
+  margin-right: -3px;
+  padding: 4px 30px 4px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color: $base-primary;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#small-arrow-icon");
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+  }
+}

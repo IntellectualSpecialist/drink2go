@@ -10,16 +10,16 @@
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper container">
-        <div class="main-header__logo logo">
-          <picture>
-            <source width="170" height="36" media="(min-width: 1440px)" srcset="images/logo-full.svg" type="image/svg+xml">
-            <source width="82" height="36" media="(min-width: 768px)" srcset="images/logo-short.svg" type="image/svg+xml">
-            <img src="images/logo-symbol.svg" width="32" height="36" alt="Логотип «Drink2go».">
-          </picture>
-          <p class="logo__text">Интернет-магазин кофейных напитков</p>
-        </div>
         <nav class="main-nav">
-          <ul class="main-nav__list site-list">
+          <div class="main-nav__logo logo">
+            <picture>
+              <source width="170" height="36" media="(min-width: 1440px)" srcset="images/logo-full.svg" type="image/svg+xml">
+              <source width="82" height="36" media="(min-width: 768px)" srcset="images/logo-short.svg" type="image/svg+xml">
+              <img class="logo__image" src="images/logo-symbol.svg" width="32" height="36" alt="Логотип «Drink2go».">
+            </picture>
+            <p class="logo__text">Интернет-магазин кофейных напитков</p>
+          </div>
+          <ul class="main-nav__site-list site-list">
             <li class="site-list__item">
               <span class="site-list__link site-list__link--active">Главная</span>
             </li>
@@ -33,10 +33,10 @@
               <a class="site-list__link" href="#">О нас</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-login">
+                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-login">
                   <title id="icon-login">Войти</title>
                   <use href="icons/stack.svg#user-icon"></use>
                 </svg>
@@ -45,7 +45,7 @@
             </li>
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__cart-icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-cart">
+                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-cart">
                   <title id="icon-cart">Корзина</title>
                   <use href="icons/stack.svg#cart-icon"></use>
                 </svg>
@@ -53,9 +53,9 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__burger" type="button">
+          <button class="main-nav__burger burger js-toggle-button" type="button">
             <span class="visually-hidden">Меню</span>
-            <span class="main-nav__burger-icon"></span>
+            <span class="burger__icon"></span>
           </button>
         </nav>
       </div>
@@ -65,7 +65,7 @@
       <section class="hero">
         <div class="hero__wrapper container">
           <div class="hero__slider slider">
-            <button class="slider__navigation slider__navigation--prev" type="button">
+            <button class="slider__navigation slider__navigation--prev" type="button" disabled>
               <svg class="slider__navigation-icon" width="11" height="20" viewBox="0 0 11 20">
                 <use href="icons/stack.svg#arrow-icon"></use>
               </svg>
@@ -73,74 +73,86 @@
             </button>
             <ul class="slider__list">
               <li class="slider__item slider__item--active product-card product-card--promo">
-                <picture>
-                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp, images/flat-white-desktop@2x.webp 2x">
-                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp, images/flat-white-tablet@2x.webp 2x">
-                  <source width="280" height="280" type="image/webp" srcset="images/flat-white-mobile@1x.webp, images/flat-white-mobile@2x.webp 2x">
-                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png, images//flat-white-desktop@2x.png 2x">
-                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
-                  <img class="product-card__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp, images/flat-white-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp, images/flat-white-tablet@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/flat-white-mobile@1x.webp, images/flat-white-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png, images//flat-white-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
+                    <img class="product-card__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h2 class="product-card__title title title--big">
-                    <span class="title__sub-title">Новинка!</span>
-                    <span class="title__main">Декаф Флэт Уайт</span>
-                  </h2>
+                  <a class="product-card__title-link" href="#">
+                    <h2 class="product-card__title title-big title-big--promo">
+                      <span class="title-big__sub-title">Новинка!</span>
+                      <span class="title-big__main">Декаф&nbsp;Флэт Уайт</span>
+                    </h2>
+                  </a>
                   <p class="product-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">259&#8381;</del>
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="slider__button button button--primary" type="button">Заказать</button>
+                    <a class="slider__button button button--primary" href="#">Заказать</a>
                   </footer>
                 </div>
               </li>
               <li class="slider__item product-card product-card--promo">
-                <picture>
-                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp, images/espresso-desktop@2x.webp 2x">
-                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp, images/espresso-tablet@2x.webp 2x">
-                  <source width="280" height="280" type="image/webp" srcset="images/espresso-mobile@1x.webp, images/espresso-mobile@2x.webp 2x">
-                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png, images/espresso-desktop@2x.png 2x">
-                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
-                  <img class="product-card__image" src="images/espresso-mobile@1x.png" srcset="images/fespresso-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp, images/espresso-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp, images/espresso-tablet@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/espresso-mobile@1x.webp, images/espresso-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png, images/espresso-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
+                    <img class="product-card__image" src="images/espresso-mobile@1x.png" srcset="images/fespresso-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h2 class="product-card__title title title--big">
-                    <span class="title__sub-title">Новинка!</span>
-                    <span class="title__main">Лавандовый Латте</span>
-                  </h2>
+                  <a class="product-card__title-link" href="#">
+                    <h2 class="product-card__title title-big title-big--promo">
+                      <span class="title-big__sub-title">Новинка!</span>
+                      <span class="title-big__main">Лавандовый Латте</span>
+                    </h2>
+                  </a>
                   <p class="product-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">285&#8381;</del>
-                      <span class="full-price__new-price">265&#8381;</span>
+                      <span class="full-price__current-price">265&#8381;</span>
                     </p>
-                    <button class="slider__button button button--primary" type="button">Заказать</button>
+                    <a class="slider__button button button--primary" href="#">Заказать</a>
                   </footer>
                 </div>
               </li>
               <li class="slider__item product-card product-card--promo">
-                <picture>
-                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp, images/lavender-desktop@2x.webp 2x">
-                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp, images/lavender-tablet@2x.webp 2x">
-                  <source width="280" height="280" type="image/webp" srcset="images/lavender-mobile@1x.webp, images/lavender-mobile@2x.webp 2x">
-                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png, images/lavender-desktop@2x.png 2x">
-                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png, images/lavender-tablet@2x.png 2x">
-                  <img class="product-card__image" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
-                </picture>
+                <a class="product-card__title-link" href="#">
+                  <picture>
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp, images/lavender-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp, images/lavender-tablet@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/lavender-mobile@1x.webp, images/lavender-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png, images/lavender-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png, images/lavender-tablet@2x.png 2x">
+                    <img class="product-card__image" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h2 class="product-card__title title title--big">
-                    <span class="title__sub-title">Новинка!</span>
-                    <span class="title__main">Тройной Эспрессо</span>
-                  </h2>
+                  <a class="product-card__image-title" href="#">
+                    <h2 class="product-card__title title-big title-big--promo">
+                      <span class="title-big__sub-title">Новинка!</span>
+                      <span class="title-big__main">Тройной Эспрессо</span>
+                    </h2>
+                  </a>
                   <p class="product-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
                       <del class="full-price__old-price">395&#8381;</del>
-                      <span class="full-price__new-price">375&#8381;</span>
+                      <span class="full-price__current-price">375&#8381;</span>
                     </p>
-                    <button class="slider__button button button--primary" type="button">Заказать</button>
+                    <a class="slider__button button button--primary" href="#">Заказать</a>
                   </footer>
                 </div>
               </li>
@@ -153,18 +165,21 @@
             </button>
             <ul class="slider__pagination">
               <li class="slider__pagination-item">
-                <button class="slider__pagination-button" type="button">
+                <button class="slider__pagination-button slider__pagination-button--current" type="button">
                   <span class="visually-hidden">1</span>
+                  <span></span>
                 </button>
               </li>
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button" type="button">
                   <span class="visually-hidden">2</span>
+                  <span></span>
                 </button>
               </li>
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button" type="button">
                   <span class="visually-hidden">3</span>
+                  <span></span>
                 </button>
               </li>
             </ul>
@@ -173,58 +188,66 @@
       </section>
       <section class="features">
         <div class="features__wrapper container">
-          <h2 class="features__title title">
-            <span class="title__sub-title">Преимущества</span>
-            <span class="title__main">Главные причины выбрать Drink2Go</span>
+          <h2 class="features__title title-big">
+            <span class="title-big__sub-title">Преимущества</span>
+            <span class="title-big__main">Главные причины выбрать Drink2Go</span>
           </h2>
           <ul class="features__list">
             <li class="features__item">
               <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="speed">
                 <use href="icons/stack.svg#clock-icon"></use>
               </svg>
-              <h3 class="features__item-title" id="speed">Скорость</h3>
-              <p class="features__item-descriptions">Готовый напиток всегда под рукой — просто открой банку</p>
+              <div class="features__text">
+                <h3 class="features__item-title title-middle" id="speed">Скорость</h3>
+                <p class="features__item-descriptions">Готовый напиток всегда под рукой — просто открой банку</p>
+              </div>
             </li>
             <li class="features__item">
               <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="convenience">
                 <use href="icons/stack.svg#pocket-icon"></use>
               </svg>
-              <h3 class="features__item-title" id="convenience">Удобство</h3>
-              <p class="features__item-descriptions">Легко помещается и в карман, и в маленькую сумочку</p>
+              <div class="features__text">
+                <h3 class="features__item-title title-middle" id="convenience">Удобство</h3>
+                <p class="features__item-descriptions">Легко помещается и в карман, и в маленькую сумочку</p>
+              </div>
             </li>
             <li class="features__item">
               <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="cheerfulness">
                 <use href="icons/stack.svg#lightning-icon"></use>
               </svg>
-              <h3 class="features__item-title" id="cheerfulness">Бодрость</h3>
-              <p class="features__item-descriptions">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              <div class="features__text">
+                <h3 class="features__item-title title-middle" id="cheerfulness">Бодрость</h3>
+                <p class="features__item-descriptions">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              </div>
             </li>
             <li class="features__item">
               <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="eco-friendly">
                 <use href="icons/stack.svg#leaf-icon"></use>
               </svg>
-              <h3 class="features__item-title" id="eco-friendly">Экологичность</h3>
-              <p class="features__item-descriptions">Вся упаковка сделана из перерабатываемых материалов</p>
+              <div class="features__text">
+                <h3 class="features__item-title title-middle" id="eco-friendly">Экологичность</h3>
+                <p class="features__item-descriptions">Вся упаковка сделана из перерабатываемых материалов</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
       <section class="catalog">
         <div class="catalog__wrapper container">
-          <h2 class="catalog__title title">
-            <span class="title__sub-title">Каталог</span>
-            <span class="title__main">Каталог кофейных напитков</span>
+          <h2 class="catalog__title title-big">
+            <span class="title-big__sub-title">Каталог</span>
+            <span class="title-big__main">Каталог кофейных напитков</span>
           </h2>
           <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="form__group">
-              <legend class="form__title title-form">Цена</legend>
+              <legend class="form__title title-small">Цена</legend>
               <div class="form__range range">
                 <div class="range__scale">
-                  <div class="range__bar" style="left: 0; width: 226px;">
-                    <button class="range__toggle range__toggle--min" type="button">
+                  <div class="range__bar" style="left: 0; width: 260px;">
+                    <button class="range__toggle range__toggle--min radio radio--toggle" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range__toggle range__toggle--max" type="button">
+                    <button class="range__toggle range__toggle--max radio radio--toggle" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -232,7 +255,7 @@
                 <div class="range__fields">
                   <label class="range__field" for="min-price">
                     <span class="visually-hidden">от</span>
-                    <input class="range__control field" type="number" id="min-price" name="min-price" value="0">
+                    <input class="range__control field" type="number" id="min-price" name="min-price" placeholder="0">
                   </label>
                   <label class="range__field" for="max-price">
                     <span class="visually-hidden">до</span>
@@ -242,7 +265,7 @@
               </div>
             </fieldset>
             <fieldset class="form__group">
-              <legend class="form__title title-form">Наличие молока</legend>
+              <legend class="form__title title-small">Наличие молока</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__field form-field">
@@ -271,7 +294,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__group">
-              <legend class="form__title title-form">Страна произрастания</legend>
+              <legend class="form__title title-small">Страна произрастания</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <label class="form__field form-field">
@@ -306,13 +329,13 @@
               </ul>
             </fieldset>
             <div class="form__buttons">
-              <button class="button button--primary" type="submit">Применить</button>
-              <button class="button button--secondary" type="reset">Сбросить</button>
+              <button class="form__button button button--primary" type="submit">Применить</button>
+              <button class="form__button button button--secondary" type="reset">Сбросить</button>
             </div>
           </form>
           <div class="catalog__products">
             <div class="catalog__sorting sorting">
-                <label class="sorting__label title-form" for="products-sorting">Сортировка</label>
+                <label class="sorting__label title-small" for="products-sorting">Сортировка:</label>
                 <select class="sorting__control" name="products-sorting" id="products-sorting">
                   <option value="default">По умолчанию</option>
                   <option value="expensive">Сначала дорогое</option>
@@ -321,98 +344,122 @@
             </div>
             <ul class="catalog__products-cards products-cards">
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-1@1x.webp, images/coffee-can-1@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-1@1x.jpg" srcset="images/coffee-can-1@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-1@1x.webp, images/coffee-can-1@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-1@1x.jpg" srcset="images/coffee-can-1@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-2@1x.webp, images/coffee-can-2@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-2@2x.jpg" srcset="images/coffee-can-2@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-2@1x.webp, images/coffee-can-2@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-2@2x.jpg" srcset="images/coffee-can-2@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-3@1x.webp, images/coffee-can-3@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-3@1x.jpg" srcset="images/coffee-can-3@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-3@1x.webp, images/coffee-can-3@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-3@1x.jpg" srcset="images/coffee-can-3@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-4@1x.webp, images/coffee-can-4@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-4@1x.jpg" srcset="images/coffee-can-4@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-4@1x.webp, images/coffee-can-4@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-4@1x.jpg" srcset="images/coffee-can-4@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-5@1x.webp, images/coffee-can-5@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-5@1x.jpg" srcset="images/coffee-can-5@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-5@1x.webp, images/coffee-can-5@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-5@1x.jpg" srcset="images/coffee-can-5@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
               <li class="products-cards__item product-card">
-                <picture>
-                  <source width="130" height="188" type="image/webp" srcset="images/coffee-can-6@1x.webp, images/coffee-can-6@2x.webp 2x">
-                  <img class="product-card__image" src="images/coffee-can-6@1x.jpg" srcset="images/coffee-can-6@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
-                </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source width="130" height="188" type="image/webp" srcset="images/coffee-can-6@1x.webp, images/coffee-can-6@2x.webp 2x">
+                    <img class="product-card__image" src="images/coffee-can-6@1x.jpg" srcset="images/coffee-can-6@2x.jpg 2x" width="130" height="188" alt="Изображение товара">
+                  </picture>
+                </a>
                 <div class="product-card__info">
-                  <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                  <a class="product-card__title-link" href="#">
+                    <h3 class="product-card__title title-middle">Декаф Флэт Уайт</h3>
+                  </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <footer class="product-card__footer">
                     <p class="product-card__full-price full-price">
-                      <span class="full-price__new-price">225&#8381;</span>
+                      <span class="full-price__current-price">225&#8381;</span>
                     </p>
-                    <button class="product-card__button button button--primary button--icon" type="button">В корзину</button>
+                    <a class="product-card__button button button--primary button--icon" href="#">В корзину</a>
                   </footer>
                 </div>
               </li>
@@ -438,12 +485,12 @@
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
         <picture>
-          <source width="100%" height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x">
-          <source width="100%" height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x">
-          <source width="100%" height="420" type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x">
-          <source width="100%" height="540" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x">
-          <source width="100%" height="480" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x">
-          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="100%" height="420" alt="Карта">
+          <source height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x">
+          <source height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x">
+          <source height="420" type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x">
+          <source height="540" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x">
+          <source height="480" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x">
+          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" height="420" alt="Карта">
         </picture>
       </section>
     </main>

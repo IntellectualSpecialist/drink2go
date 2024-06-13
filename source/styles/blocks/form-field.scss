@@ -1,0 +1,21 @@
+.form-field {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  cursor: pointer;
+
+  &:has(input:disabled) {
+    pointer-events: none;
+    color: $base-grey;
+  }
+}
+
+.form-field__control {
+  flex-shrink: 0;
+}
+
+.form-field__label {
+  overflow-wrap: anywhere;
+}

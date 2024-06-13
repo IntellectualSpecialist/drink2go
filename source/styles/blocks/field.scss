@@ -1,0 +1,27 @@
+.field {
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 4px;
+  transition: 0.2s ease-in;
+
+  &::placeholder {
+    color: $base-grey;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $alt-primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $alt-light-grey;
+    background-color: $bg-lightest-grey;
+  }
+}

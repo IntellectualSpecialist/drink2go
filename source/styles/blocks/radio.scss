@@ -1,0 +1,59 @@
+.radio {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: $base-white;
+  border: 2px solid $base-grey;
+  border-radius: 12px;
+  cursor: pointer;
+  appearance: none;
+  transition: 0.2s ease-in;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    background-color: $base-primary;
+    border-radius: 13px;
+    transition: 0.2s ease-in;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $alt-primary-lighter;
+
+    &::before {
+      content: "";
+      background-color: $alt-primary-opacity;
+    }
+  }
+
+  &:checked,
+  &:active {
+    border-color: $base-primary;
+
+    &::before {
+      content: "";
+      background-color: $base-primary;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    border-color: $alt-light-grey;
+
+    &:checked {
+      &::before {
+        background-color: $alt-light-grey;
+      }
+    }
+  }
+
+  &--toggle {
+    border: 2px solid $alt-primary-lighter;
+  }
+}

@@ -1,0 +1,49 @@
+.range__scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 34px;
+  background-color: $alt-light-grey;
+}
+
+.range__bar {
+  position: absolute;
+  top: -1px;
+  height: 4px;
+  background-color: $alt-primary-lighter;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.range__toggle--min {
+  left: 0;
+}
+
+.range__toggle--max {
+  right: 0;
+}
+
+.range__fields {
+  position: relative;
+  display: flex;
+  gap: 44px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    transform: translateX(-50%);
+  }
+}
+
+.range__control {
+  width: 118px;
+  height: 40px;
+}

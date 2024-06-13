@@ -1,0 +1,19 @@
+.full-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.full-price__old-price {
+  font-size: 16px;
+  line-height: 200%;
+  color: $base-primary;
+}
+
+.full-price__current-price {
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 600;
+  color: $base-black;
+}

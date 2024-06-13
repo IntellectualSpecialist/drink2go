@@ -1,0 +1,54 @@
+.title-big {
+  margin: 0;
+  text-align: center;
+
+  &--promo {
+    .title-big__main {
+      font-size: 36px;
+      line-height: 133%;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .title-big__main {
+      font-size: 42px;
+      line-height: 152%;
+    }
+
+    &--promo {
+      .title-big__sub-title {
+        font-size: 12px;
+        line-height: 133%;
+      }
+
+      .title-big__main {
+        font-size: 56px;
+        line-height: 143%;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--promo {
+      text-align: left;
+    }
+  }
+}
+
+.title-big__sub-title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $base-primary;
+}
+
+.title-big__main {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
