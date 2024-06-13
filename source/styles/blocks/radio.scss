@@ -11,7 +11,9 @@
   transition: 0.2s ease-in;
 
   &::before {
+    content: "";
     position: absolute;
+    opacity: 0;
     top: 50%;
     left: 50%;
     width: 16px;
@@ -27,7 +29,7 @@
     border-color: $alt-primary-lighter;
 
     &::before {
-      content: "";
+      opacity: 1;
       background-color: $alt-primary-opacity;
     }
   }
@@ -37,7 +39,7 @@
     border-color: $base-primary;
 
     &::before {
-      content: "";
+      opacity: 1;
       background-color: $base-primary;
     }
   }

@@ -112,8 +112,8 @@
 .product-card__info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 20px;
+  padding-top: 0;
 }
 
 .product-card__title-link {
@@ -129,7 +129,7 @@
 }
 
 .product-card__footer {
-  margin-bottom: 16px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

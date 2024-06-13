@@ -334,13 +334,15 @@
             </div>
           </form>
           <div class="catalog__products">
-            <div class="catalog__sorting sorting">
-                <label class="sorting__label title-small" for="products-sorting">Сортировка:</label>
-                <select class="sorting__control" name="products-sorting" id="products-sorting">
-                  <option value="default">По умолчанию</option>
-                  <option value="expensive">Сначала дорогое</option>
-                  <option value="cheap">Сначала дешевое</option>
-                </select>
+            <div class="catalog__sorting-wrapper">
+                <label class="catalog__sorting-label title-small" for="products-sorting">Сортировка:</label>
+                <div class="catalog__sorting sorting">
+                  <select class="sorting__control" name="products-sorting" id="products-sorting">
+                    <option value="default">По умолчанию</option>
+                    <option value="expensive">Сначала дорогое</option>
+                    <option value="cheap">Сначала дешевое</option>
+                  </select>
+                </div>
             </div>
             <ul class="catalog__products-cards products-cards">
               <li class="products-cards__item product-card">
@@ -465,19 +467,23 @@
               </li>
             </ul>
             <div class="catalog__pagination pagination">
-              <a class="pagination__prev button button--secondary" href="#">Назад</a>
+              <a class="pagination__toggle pagination__toggle--prev pagination__button button button--secondary" href="#">
+                <span class="visually-hidden">Назад</span>
+              </a>
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a class="button button--secondary" href="#">1</a>
+                  <a class="pagination__button button button--secondary" href="#">1</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="button button--secondary button--current" href="#">2</a>
+                  <a class="pagination__button pagination__button--current button button--secondary" href="#">2</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="button button--secondary" href="#">3</a>
+                  <a class="pagination__button button button--secondary" href="#">3</a>
                 </li>
               </ul>
-              <a class="pagination__next button button--secondary" href="#">Вперёд</a>
+              <a class="pagination__toggle pagination__toggle--next pagination__button button button--secondary" href="#">
+                <span class="visually-hidden">Вперёд</span>
+              </a>
             </div>
           </div>
         </div>
@@ -485,12 +491,12 @@
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x">
-          <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x">
-          <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x">
-          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" height="420" alt="Карта">
+          <source type="image/webp" width="1440" height="540px" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x">
+          <source type="image/webp" width="768" height="480px" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x">
+          <source type="image/webp" width="320" height="420px" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x">
+          <source type="image/png" width="1440" height="540px" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x">
+          <source type="image/png" width="768" height="480px" media="(min-width: 768px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x">
+          <img class="map__image" src="images/map-mobile@1x.png" width="320" height="420px" srcset="images/map-mobile@2x.png 2x" height="420" alt="Карта">
         </picture>
       </section>
     </main>

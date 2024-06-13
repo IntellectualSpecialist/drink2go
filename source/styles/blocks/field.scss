@@ -24,4 +24,9 @@
     border-color: $alt-light-grey;
     background-color: $bg-lightest-grey;
   }
+
+  &:focus:invalid {
+    border-color: $error-color;
+    outline: none;
+  }
 }
