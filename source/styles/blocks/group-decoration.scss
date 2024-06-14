@@ -1,0 +1,16 @@
+.group-decoration {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $base-secondary;
+      box-shadow: 100vw 0 0 $base-secondary;
+    }
+  }
+}

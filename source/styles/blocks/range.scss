@@ -3,13 +3,23 @@
   height: 2px;
   margin-bottom: 34px;
   background-color: $alt-light-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .range__bar {
   position: absolute;
   top: -1px;
+  left: 0;
+  width: 260px;
   height: 4px;
   background-color: $alt-primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+  }
 }
 
 .range__toggle {
@@ -46,4 +56,12 @@
 .range__control {
   width: 118px;
   height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
 }

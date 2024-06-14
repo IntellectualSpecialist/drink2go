@@ -12,8 +12,34 @@
     display: flex;
     column-gap: 20px;
     align-items: center;
-    width: 315px;
+    flex-wrap: wrap;
+    width: 316px;
     height: 36px;
+  }
+
+  &--footer {
+    width: 82px;
+    height: 36px;
+
+    @media (min-width: $tablet-width) {
+      width: 170px;
+      height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      width: 318px;
+      height: 66px;
+    }
+
+    @media (min-width: $desktop-width) {
+      .logo__text {
+        width: auto;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 143%;
+      }
+    }
   }
 }
 

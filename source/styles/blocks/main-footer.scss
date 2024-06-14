@@ -1,0 +1,138 @@
+.main-footer {
+  padding: 20px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0;
+  }
+}
+
+.main-footer__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1012px;
+    gap: 20px 30px;
+  }
+}
+
+.main-footer__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: start;
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__social {
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+  }
+}
+
+.main-footer__columns {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 665px 317px;
+    gap: 30px;
+  }
+}
+
+.main-footer__navigation-topics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 223px);
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-footer__navigation-topic {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer__title {
+  margin-bottom: 12px;
+}
+
+.main-footer__title--contacts {
+  margin-bottom: 20px;
+}
+
+.main-footer__navigation-item {
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__navigation-link {
+  @include nav-typography;
+  display: block;
+  padding: 8px 0;
+
+  &:hover,
+  &:focus {
+    color: $alt-primary-lighter;
+  }
+
+  &:active {
+    color: $alt-primary-darker;
+  }
+}
+
+.main-footer__contacts {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__copyright {
+  width: fit-content;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}

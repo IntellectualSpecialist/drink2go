@@ -12,23 +12,42 @@
 }
 
 .pagination__toggle {
-  position: relative;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    background-image: url("../../icons/stack.svg#small-arrow-icon");
+  &:disabled {
+    opacity: 0;
+    pointer-events: none;
   }
 
   &--next {
-    &::after {
-      transform: translate(-50%, -50%) rotate(-90deg);
+    .pagination__icon {
+      transform: rotate(-90deg);
     }
+  }
+
+  span {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+.pagination__icon {
+  transform: rotate(90deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -41,6 +60,7 @@
     font-weight: 600;
     color: $base-black;
     background-color: transparent;
+    pointer-events: none;
   }
 }
 

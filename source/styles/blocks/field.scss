@@ -9,6 +9,7 @@
   border: 2px solid $alt-primary-lighter;
   border-radius: 4px;
   transition: 0.2s ease-in;
+  appearance: textfield;
 
   &::placeholder {
     color: $base-grey;

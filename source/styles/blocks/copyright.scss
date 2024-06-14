@@ -1,0 +1,26 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 133%;
+  color: $base-grey;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $base-grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $alt-primary-darker;
+  }
+}

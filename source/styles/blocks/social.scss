@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  column-gap: 20px;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: $base-grey;
+  border-radius: 4px;
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $alt-primary-opacity;
+  }
+}

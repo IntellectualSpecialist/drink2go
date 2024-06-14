@@ -13,13 +13,12 @@
   &::before {
     content: "";
     position: absolute;
-    opacity: 0;
     top: 50%;
     left: 50%;
     width: 16px;
     height: 16px;
     transform: translate(-50%, -50%);
-    background-color: $base-primary;
+    background-color: transparent;
     border-radius: 13px;
     transition: 0.2s ease-in;
   }
@@ -29,7 +28,6 @@
     border-color: $alt-primary-lighter;
 
     &::before {
-      opacity: 1;
       background-color: $alt-primary-opacity;
     }
   }
