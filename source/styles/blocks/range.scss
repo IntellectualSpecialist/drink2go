@@ -5,7 +5,7 @@
   background-color: $alt-light-grey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 }
 
@@ -39,7 +39,7 @@
 .range__fields {
   position: relative;
   display: flex;
-  gap: 44px;
+  justify-content: space-between;
 
   &::after {
     content: "";

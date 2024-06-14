@@ -1,5 +1,6 @@
 .title-big {
   margin: 0;
+  padding: 0;
   text-align: center;
 
   &--promo {
@@ -38,12 +39,16 @@
 
 .title-big__sub-title {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   font-size: 12px;
   line-height: 133%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .title-big__main {

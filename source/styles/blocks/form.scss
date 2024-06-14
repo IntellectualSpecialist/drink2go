@@ -12,9 +12,17 @@
 
 .form__group {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding: 0;
   border: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .form__title {
@@ -37,9 +45,15 @@
 
 .form__range {
   padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 11px;
+  }
 }
 
 .form__buttons {
+  margin-top: 29px;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     display: flex;
@@ -47,6 +61,7 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 }
 

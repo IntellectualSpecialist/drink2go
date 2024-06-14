@@ -7,14 +7,15 @@
     position: absolute;
     z-index: 1;
     display: block;
-    top: 11px;
-    right: 10px;
+    top: 10px;
+    right: 7px;
     width: 10px;
     height: 10px;
-    background-image: url("../../icons/stack.svg#small-arrow-icon");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: center;
+    background-color: $base-primary;
+    mask-image: url("../../icons/stack.svg#small-arrow-icon");
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
+    mask-position: center;
     transition: 0.2s ease-in;
   }
 
@@ -33,7 +34,7 @@
 }
 
 .sorting__control {
-  width: 165px;
+  width: 162px;
   padding: 4px 28px 4px 10px;
   font-family: inherit;
   font-size: 16px;
