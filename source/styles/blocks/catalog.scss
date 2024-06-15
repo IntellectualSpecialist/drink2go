@@ -29,13 +29,15 @@
 .catalog__form {
   margin-bottom: 41px;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 21px;
-  }
-
   @media (min-width: $desktop-width) {
     width: 318px;
     margin-bottom: 0;
+  }
+}
+
+.catalog__products {
+  @media (min-width: $desktop-width) {
+    width: 1011px;
   }
 }
 
@@ -49,6 +51,11 @@
     width: 281px;
     margin-left: auto;
     margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 284px;
+    margin-bottom: 29px;
   }
 }
 

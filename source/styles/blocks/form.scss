@@ -20,8 +20,12 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 31px;
   }
 }
 
@@ -49,6 +53,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 11px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+  }
 }
 
 .form__buttons {
@@ -63,6 +71,11 @@
     flex-wrap: wrap;
     margin-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    margin-top: 39px;
+  }
 }
 
 .form__button {
@@ -75,5 +88,10 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
   }
 }

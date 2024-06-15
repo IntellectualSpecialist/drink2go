@@ -27,6 +27,10 @@
     max-width: 455px;
   }
 
+  @media (min-width: $desktop-width) {
+    max-width: 670px;
+  }
+
   &--active {
     position: absolute;
     z-index: 1;

@@ -34,7 +34,7 @@
 
 .main-footer__social {
   @media (min-width: $desktop-width) {
-    margin-top: 50px;
+    margin-top: 26px;
   }
 }
 
@@ -48,6 +48,7 @@
     display: grid;
     grid-template-columns: 665px 317px;
     gap: 30px;
+    padding-top: 9px;
   }
 }
 

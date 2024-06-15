@@ -45,7 +45,7 @@
   &:disabled {
     pointer-events: none;
     border-color: $alt-light-grey;
-    background-color: transparent;
+    background-color: $bg-lightest-grey;
 
     &:checked {
       &::before {

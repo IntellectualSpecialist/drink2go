@@ -42,6 +42,10 @@
     border-color: $alt-light-grey;
     background-color: $alt-light-grey;
 
+    &::before {
+      background-color: $bg-lightest-grey;
+    }
+
     &:checked {
       &::before {
         background-color: $base-grey;
