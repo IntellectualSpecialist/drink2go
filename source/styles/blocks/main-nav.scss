@@ -8,6 +8,7 @@
 .main-nav__logo {
   margin-top: 12px;
   margin-right: auto;
+  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
     margin-top: 22px;
@@ -24,7 +25,8 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    max-width: 455px;
+    max-width: 445px;
+    justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,8 +44,15 @@
 }
 
 .main-nav__user-list {
+  max-width: 180px;
+
   @media (min-width: $tablet-width) {
     margin-left: auto;
+    max-width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 335px;
   }
 }
 

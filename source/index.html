@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <div class="main-header__wrapper container">
         <nav class="main-nav">
           <div class="main-nav__logo logo">
@@ -69,10 +69,10 @@
     </header>
     <main class="main-content">
       <h1 class="visually-hidden">Drink2go</h1>
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="hero__wrapper container">
           <div class="hero__slider slider">
-            <button class="slider__navigation slider__navigation--prev" type="button" disabled>
+            <button class="slider__navigation slider__navigation--prev slider-button-prev" type="button" disabled>
               <span class="visually-hidden">Предыдущий слайд</span>
             </button>
             <ul class="slider__list">
@@ -155,33 +155,33 @@
                 </div>
               </li>
             </ul>
-            <button class="slider__navigation slider__navigation--next" type="button">
+            <button class="slider__navigation slider__navigation--next slider-button-next" type="button">
               <span class="visually-hidden">Следующий слайд</span>
             </button>
-            <ul class="slider__pagination">
+            <ul class="slider__pagination slider-pagination">
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button slider__pagination-button--current" type="button">
                   <span class="visually-hidden">1</span>
-                  <span></span>
+                  <span class="slider__button-icon"></span>
                 </button>
               </li>
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button" type="button">
                   <span class="visually-hidden">2</span>
-                  <span></span>
+                  <span class="slider__button-icon"></span>
                 </button>
               </li>
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button" type="button">
                   <span class="visually-hidden">3</span>
-                  <span></span>
+                  <span class="slider__button-icon"></span>
                 </button>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="features">
+      <section class="features" data-test="features">
         <div class="features__wrapper container">
           <h2 class="features__title title-big">
             <span class="title-big__sub-title">Преимущества</span>
@@ -227,7 +227,7 @@
           </ul>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <div class="catalog__wrapper container">
           <h2 class="catalog__title title-big">
             <span class="title-big__sub-title">Каталог</span>
@@ -481,7 +481,7 @@
           </div>
         </div>
       </section>
-      <section class="map">
+      <section class="map" data-test="map">
         <h2 class="visually-hidden">Карта</h2>
         <div class="map__image-wrapper">
           <picture>
@@ -495,7 +495,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <div class="main-footer__wrapper container">
         <div class="main-footer__group group-decoration">
           <div class="main-footer__logo logo logo--footer">
