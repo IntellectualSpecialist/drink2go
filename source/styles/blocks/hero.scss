@@ -1,11 +1,37 @@
 .hero {
-  background-color: $bg-flat-white;
+  --color: #f3ebe1;
+
+  position: relative;
+  background-color: var(--color);
+  transition: 0.4s ease-in;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 640px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color);
+    transition: 0.4s ease-in;
+  }
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient(0deg, $base-white, $base-white 195px, $bg-flat-white 195px, $bg-flat-white);
+    // background-image: linear-gradient(0deg, $base-white, $base-white 195px, var(--color) 195px, var(--color));
+    background-color: transparent;
+
+    &::before {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: none;
+    background-color: var(--color);
+
+    &::before {
+      display: none;
+    }
   }
 }
