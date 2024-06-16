@@ -54,7 +54,7 @@ function updateSlider() {
   slides.forEach((slide, index) => {
     if (index === slideIndex) {
       slide.classList.add('slider__item--active');
-      hero.style.setProperty('--color', BackgroundColors[index.toString()]);
+      hero.style.setProperty('background-color', BackgroundColors[index]);
 
       if (paginationButtons) {
         const currentActiveElement = document.querySelector('.slider__pagination-button--current');
@@ -97,35 +97,106 @@ const initSliderPagination = () => {
 
 initSliderPagination();
 
-const sliderElement = document.querySelector('.form__range');
-const DEFAULT_SLIDER_MIN = 0;
-const DEFAULT_SLIDER_MAX = 100;
-// const DEFAULT_SLIDER_START = DEFAULT_SLIDER_MAX;
-const DEFAULT_SLIDER_STEP = 1;
-const rangeToggleMin = document.querySelector('.range__toggle--min');
-// const rangeToggleMax = document.querySelector('.range__toggle--max');
+const sliderElement = document.querySelector('.range__wrapper');
+const slideValueMin = document.querySelector('#min-price');
+const slideValueMax = document.querySelector('#max-price');
+// const DEFAULT_SLIDER_MIN = 0;
+// const DEFAULT_SLIDER_MAX = 100;
+// // const DEFAULT_SLIDER_START = DEFAULT_SLIDER_MAX;
+// const DEFAULT_SLIDER_STEP = 1;
+// const rangeToggleMin = document.querySelector('.range__toggle--min');
+// // const rangeToggleMax = document.querySelector('.range__toggle--max');
+
+// const createNoUiSlider = () => {
+//   noUiSlider.create(sliderElement, {
+//     start: [0, 900],
+//     range: {
+//       min: DEFAULT_SLIDER_MIN,
+//       max: DEFAULT_SLIDER_MAX,
+//     },
+//     // start: DEFAULT_SLIDER_START,
+//     step: DEFAULT_SLIDER_STEP,
+//     connect: 'lower',
+//     format: {
+//       to: (value) => Number.isInteger(value) ? value.toFixed(0) : value.toFixed(1),
+//       from: (value) => parseFloat(value),
+//     }
+//   });
+
+//   sliderElement.noUiSlider.on('update', () => {
+//     rangeToggleMin.value = sliderElement.noUiSlider.get();
+//     // effectInputElement.value = Number(sliderElement.noUiSlider.get());
+//   });
+//   // setNoUiSlider();
+// };
 
 const createNoUiSlider = () => {
   noUiSlider.create(sliderElement, {
     start: [0, 900],
+    connect: [false, true, false],
     range: {
-      min: DEFAULT_SLIDER_MIN,
-      max: DEFAULT_SLIDER_MAX,
+      min: 0,
+      max: 1000,
     },
-    // start: DEFAULT_SLIDER_START,
-    step: DEFAULT_SLIDER_STEP,
-    connect: 'lower',
+    step: 1,
     format: {
-      to: (value) => Number.isInteger(value) ? value.toFixed(0) : value.toFixed(1),
+      to: (value) => value.toFixed(0),
       from: (value) => parseFloat(value),
+    },
+    cssPrefix: 'noUi-',
+    cssClasses: {
+      target: 'target range__wrapper',
+      base: 'base range__scale',
+      origin: 'origin range__toggle-wrapper',
+      handle: 'handle range__toggle radio radio--toggle',
+      handleLower: 'handleLower range__toggle--min',
+      handleUpper: 'handleUpper range__toggle--max',
+      touchArea: 'touch-area',
+      horizontal: 'horizontal',
+      vertical: 'vertical',
+      background: 'background',
+      connect: 'connect range__bar',
+      connects: 'connects range__bar-wrapper',
+      ltr: 'ltr',
+      rtl: 'rtl',
+      textDirectionLtr: 'txt-dir-ltr',
+      textDirectionRtl: 'txt-dir-rtl',
+      draggable: 'draggable',
+      drag: 'state-drag',
+      tap: 'state-tap',
+      active: 'active',
+      tooltip: 'tooltip',
+      pips: 'pips',
+      pipsHorizontal: 'pips-horizontal',
+      pipsVertical: 'pips-vertical',
+      marker: 'marker',
+      markerHorizontal: 'marker-horizontal',
+      markerVertical: 'marker-vertical',
+      markerNormal: 'marker-normal',
+      markerLarge: 'marker-large',
+      markerSub: 'marker-sub',
+      value: 'value',
+      valueHorizontal: 'value-horizontal',
+      valueVertical: 'value-vertical',
+      valueNormal: 'value-normal',
+      valueLarge: 'value-large',
+      valueSub: 'value-sub'
     }
   });
 
-  sliderElement.noUiSlider.on('update', () => {
-    rangeToggleMin.value = sliderElement.noUiSlider.get();
-    // effectInputElement.value = Number(sliderElement.noUiSlider.get());
+  sliderElement.noUiSlider.on('update', (values) => {
+    slideValueMin.value = values[0];
+    slideValueMax.value = values[1];
   });
-  // setNoUiSlider();
 };
+
+slideValueMin.addEventListener('change', () => {
+  sliderElement.noUiSlider.set([slideValueMin.value, null]);
+});
+
+slideValueMax.addEventListener('change', () => {
+  sliderElement.noUiSlider.set([null, slideValueMax.value]);
+});
+
 
 createNoUiSlider();

@@ -19,14 +19,18 @@
     transition: 0.2s ease-in;
   }
 
-  &:has(.sorting__control:hover) {
+  &:has(.sorting__control:hover),
+  &:has(.sorting__control:focus) {
     .sorting__control {
       background-color: $base-secondary;
     }
   }
 
-  &:has(.sorting__control:focus),
   &:has(.sorting__control:active) {
+    .sorting__control {
+      background-color: transparent;
+    }
+
     &::after {
       transform: rotate(180deg);
     }

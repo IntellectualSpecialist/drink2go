@@ -2,7 +2,7 @@
   --color: #f3ebe1;
 
   position: relative;
-  background-color: var(--color);
+  background-color: $bg-flat-white;
   transition: 0.4s ease-in;
 
   &::before {
@@ -10,17 +10,15 @@
     position: absolute;
     display: none;
     width: 100%;
-    height: 640px;
-    top: 0;
+    height: 195px;
+    bottom: 0;
     left: 0;
-    right: 0;
-    background-color: var(--color);
+    background-color: $base-white;
     transition: 0.4s ease-in;
   }
 
   @media (min-width: $tablet-width) {
-    // background-image: linear-gradient(0deg, $base-white, $base-white 195px, var(--color) 195px, var(--color));
-    background-color: transparent;
+    background-color: $bg-flat-white;
 
     &::before {
       display: block;
@@ -28,7 +26,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: var(--color);
+    background-color: $bg-flat-white;
 
     &::before {
       display: none;
