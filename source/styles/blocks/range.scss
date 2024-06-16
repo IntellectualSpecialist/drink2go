@@ -1,9 +1,11 @@
 .range__wrapper {
   position: relative;
   height: 4px;
-  padding: 0 12px;
-
   margin-bottom: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+  background-color: $alt-light-grey;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 31px;
@@ -15,14 +17,11 @@
 }
 
 .range__scale {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  top: 0;
-  right: 0;
-  height: 4px;
   width: 100%;
-  background-color: $alt-light-grey;
-  will-change: transform;
+  height: 100%;
+  background-color: transparent;
 }
 
 .range__bar-wrapper {
@@ -36,19 +35,14 @@
 .range__bar {
   position: absolute;
   z-index: 1;
-  top: -1px;
+  top: 0;
   right: 0;
   width: 100%;
-  height: 4px;
-  padding: 0 12px;
+  height: 100%;
   background-color: $alt-primary-lighter;
   will-change: transform;
   transform-origin: 0 0;
   transform-style: flat;
-
-  @media (min-width: $tablet-width) {
-    // width: 200px;
-  }
 }
 
 .range__toggle-wrapper {
@@ -67,6 +61,8 @@
   position: absolute;
   right: -12px;
   top: 50%;
+  width: 24px;
+  height: 24px;
   transform: translateY(-50%);
 }
 
