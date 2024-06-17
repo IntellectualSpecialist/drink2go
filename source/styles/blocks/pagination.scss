@@ -13,10 +13,32 @@
 }
 
 .pagination__toggle {
+  position: relative;
   flex-shrink: 0;
   padding: 8px;
   width: 40px;
   height: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    mask-image: url("../../icons/stack.svg#small-arrow-icon");
+    background-color: $base-primary;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: 0.2s ease-in;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      background-color: $base-white;
+    }
+  }
 
   &:disabled {
     opacity: 0;
@@ -24,13 +46,15 @@
   }
 
   &--next {
-    .pagination__icon {
-      transform: rotate(-90deg);
+    &::before {
+      transform: translate(-50%, -50%) rotate(-90deg);
     }
   }
 
   span {
-    display: none;
+    &:last-child {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -39,17 +63,19 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    span {
-      display: inline;
+    &::before {
+      display: none;
     }
-  }
-}
 
-.pagination__icon {
-  transform: rotate(90deg);
+    span {
+      &:first-child {
+        display: none;
+      }
 
-  @media (min-width: $tablet-width) {
-    display: none;
+      &:last-child {
+        display: inline;
+      }
+    }
   }
 }
 

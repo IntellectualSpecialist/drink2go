@@ -12,7 +12,6 @@
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <!-- <link rel="stylesheet" href="vendor/nouislider.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
@@ -244,11 +243,11 @@
                   <div class="range__fields">
                     <label class="range__field" for="min-price">
                       <span class="visually-hidden">от</span>
-                      <input class="range__control field" type="number" id="min-price" name="min-price" placeholder="0">
+                      <input class="range__control field" type="number" id="min-price" name="min-price" value="0" placeholder="0">
                     </label>
                     <label class="range__field" for="max-price">
                       <span class="visually-hidden">до</span>
-                      <input class="range__control field" type="number" id="max-price" name="max-price" value="900">
+                      <input class="range__control field" type="number" id="max-price" name="max-price" value="900" placeholder="900">
                     </label>
                   </div>
                 </div>
@@ -445,10 +444,7 @@
               </ul>
               <div class="catalog__pagination pagination">
                 <a class="pagination__toggle pagination__toggle--prev button button--secondary" href="#">
-                  <svg class="pagination__icon" width="10" height="10" viewBox="0 0 10 10" aria-labelledby="prev">
-                    <title id="prev">Назад</title>
-                    <use href="icons/stack.svg#small-arrow-icon"></use>
-                  </svg>
+                  <span class="visually-hidden">Назад</span>
                   <span>Назад</span>
                 </a>
                 <ul class="pagination__list">
@@ -463,10 +459,7 @@
                   </li>
                 </ul>
                 <a class="pagination__toggle pagination__toggle--next button button--secondary" href="#">
-                  <svg class="pagination__icon" width="10" height="10" viewBox="0 0 10 10" aria-labelledby="next">
-                    <title id="next">Вперёд</title>
-                    <use href="icons/stack.svg#small-arrow-icon"></use>
-                  </svg>
+                  <span class="visually-hidden">Вперёд</span>
                   <span>Вперёд</span>
                 </a>
               </div>
