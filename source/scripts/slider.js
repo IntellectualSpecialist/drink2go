@@ -4,35 +4,35 @@ const BACKGROUND_COLORS = [
   '#e5e6e8'
 ];
 let slideIndex = 0;
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.slider-button-prev');
-const nextButton = document.querySelector('.slider-button-next');
-const slides = Array.from(slider.querySelectorAll('.slider__item'));
-const slideCount = slides.length;
-const paginationButtons = Array.from(slider.querySelectorAll('.slider__pagination-button'));
-const hero = document.querySelector('.hero');
+const sliderPromoElement = document.querySelector('.slider');
+const prevButtonElement = document.querySelector('.slider-button-prev');
+const nextButtonElement = document.querySelector('.slider-button-next');
+const slidesElements = Array.from(sliderPromoElement.querySelectorAll('.slider__item'));
+const slideCount = slidesElements.length;
+const paginationButtonsElements = Array.from(sliderPromoElement.querySelectorAll('.slider__pagination-button'));
+const heroElement = document.querySelector('.hero');
 
 const changeActivePaginationButton = () => {
-  if (paginationButtons) {
+  if (paginationButtonsElements) {
     const currentActiveElement = document.querySelector('.slider__pagination-button--current');
     currentActiveElement.classList.remove('slider__pagination-button--current');
-    paginationButtons[slideIndex].classList.add('slider__pagination-button--current');
+    paginationButtonsElements[slideIndex].classList.add('slider__pagination-button--current');
   }
 };
 
 const updateSlider = () => {
-  slides.forEach((slide, index) => {
+  slidesElements.forEach((slide, index) => {
     if (index === slideIndex) {
       slide.classList.add('slider__item--active');
-      hero.style.setProperty('background-color', BACKGROUND_COLORS[index]);
+      heroElement.style.setProperty('background-color', BACKGROUND_COLORS[index]);
     } else {
       slide.classList.remove('slider__item--active');
     }
   });
 
-  prevButton.disabled = slideIndex === 0;
+  prevButtonElement.disabled = slideIndex === 0;
 
-  nextButton.disabled = slideIndex === slides.length - 1;
+  nextButtonElement.disabled = slideIndex === slidesElements.length - 1;
   changeActivePaginationButton();
 };
 
@@ -47,13 +47,13 @@ const showNextSlide = () => {
 };
 
 const registerSLiderButtonsEvents = () => {
-  prevButton.addEventListener('click', showPreviousSlide);
-  nextButton.addEventListener('click', showNextSlide);
+  prevButtonElement.addEventListener('click', showPreviousSlide);
+  nextButtonElement.addEventListener('click', showNextSlide);
 };
 
 const registerSliderPaginationEvents = () => {
-  if (paginationButtons) {
-    paginationButtons.forEach((button, index) => {
+  if (paginationButtonsElements) {
+    paginationButtonsElements.forEach((button, index) => {
       button.addEventListener('click', () => {
         slideIndex = index;
         updateSlider();

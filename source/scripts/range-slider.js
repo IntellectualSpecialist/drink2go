@@ -6,9 +6,9 @@ const DefaultSliderStart = {
   SECOND_VALUE: 900,
 };
 const sliderElement = document.querySelector('.range__wrapper');
-const priceInputMin = document.querySelector('#min-price');
-const priceInputMax = document.querySelector('#max-price');
-const priceInputs = Array.from(document.querySelectorAll('.range__control'));
+const priceInputMinElement = document.querySelector('#min-price');
+const priceInputMaxElement = document.querySelector('#max-price');
+const priceInputsElements = Array.from(document.querySelectorAll('.range__control'));
 
 const createNoUiSlider = () => {
   noUiSlider.create(sliderElement, {
@@ -45,19 +45,19 @@ const createNoUiSlider = () => {
   });
 
   sliderElement.noUiSlider.on('update', (values) => {
-    priceInputs.forEach((input, index) => {
+    priceInputsElements.forEach((input, index) => {
       input.value = values[index];
     });
   });
 };
 
 const registerInputsEvents = () => {
-  priceInputMin.addEventListener('change', () => {
-    sliderElement.noUiSlider.set([priceInputMin.value, null]);
+  priceInputMinElement.addEventListener('change', () => {
+    sliderElement.noUiSlider.set([priceInputMinElement.value, null]);
   });
 
-  priceInputMax.addEventListener('change', () => {
-    sliderElement.noUiSlider.set([null, priceInputMax.value]);
+  priceInputMaxElement.addEventListener('change', () => {
+    sliderElement.noUiSlider.set([null, priceInputMaxElement.value]);
   });
 };
 
