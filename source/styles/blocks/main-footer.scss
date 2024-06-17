@@ -16,11 +16,10 @@
 
 .main-footer__group {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding-bottom: 20px;
-  row-gap: 10px;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
@@ -28,14 +27,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    align-items: start;
-    margin-bottom: 0;
+    display: block;
   }
+}
+
+.main-footer__logo {
+  flex-shrink: 0;
 }
 
 .main-footer__social {
   @media (min-width: $desktop-width) {
-    margin-top: 16px;
+    margin-top: 50px;
   }
 }
 

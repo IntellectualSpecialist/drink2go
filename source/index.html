@@ -43,7 +43,7 @@
           <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-login">
+                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="icon-login">
                   <title id="icon-login">Войти</title>
                   <use href="icons/stack.svg#user-icon"></use>
                 </svg>
@@ -52,7 +52,7 @@
             </li>
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" aria-labelledby="icon-cart">
+                <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="icon-cart">
                   <title id="icon-cart">Корзина</title>
                   <use href="icons/stack.svg#cart-icon"></use>
                 </svg>
@@ -61,7 +61,7 @@
             </li>
           </ul>
           <button class="main-nav__burger burger js-toggle-button" type="button">
-            <span class="visually-hidden">Меню</span>
+            <span class="visually-hidden">Открыть/закрыть меню</span>
             <span class="burger__icon"></span>
           </button>
         </nav>
@@ -189,7 +189,7 @@
           </h2>
           <ul class="features__list">
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="speed">
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" role="img" aria-labelledby="speed">
                 <use href="icons/stack.svg#clock-icon"></use>
               </svg>
               <div class="features__text">
@@ -198,7 +198,7 @@
               </div>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="convenience">
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" role="img" aria-labelledby="convenience">
                 <use href="icons/stack.svg#pocket-icon"></use>
               </svg>
               <div class="features__text">
@@ -207,7 +207,7 @@
               </div>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="cheerfulness">
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" role="img" aria-labelledby="cheerfulness">
                 <use href="icons/stack.svg#lightning-icon"></use>
               </svg>
               <div class="features__text">
@@ -216,7 +216,7 @@
               </div>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" aria-labelledby="eco-friendly">
+              <svg class="features__icon" width="52" height="56" viewBox="0 0 52 56" role="img" aria-labelledby="eco-friendly">
                 <use href="icons/stack.svg#leaf-icon"></use>
               </svg>
               <div class="features__text">
@@ -495,7 +495,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#vk"></use>
                 </svg>
               </a>
@@ -503,7 +503,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Пинтерест</span>
-                <svg class="social__icon" width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <svg class="social__icon" width="22" height="22" viewBox="0 0 20 20" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#pinterest"></use>
                 </svg>
               </a>
@@ -511,7 +511,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Одноклассники</span>
-                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#ok"></use>
                 </svg>
               </a>
@@ -569,7 +569,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span>HTML Academy</span>
             <span class="visually-hidden">Перейти на сайт</span>
-            <svg class="social__icon" width="12" height="16" viewBox="0 0 12 16" aria-hidden="true" focusable="false">
+            <svg class="social__icon" width="12" height="16" viewBox="0 0 12 16" role="img" aria-hidden="true" focusable="false">
               <use href="icons/stack.svg#academy-logo"></use>
             </svg>
           </a>
@@ -577,6 +577,6 @@
       </div>
     </footer>
     <script src="vendor/nouislider.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

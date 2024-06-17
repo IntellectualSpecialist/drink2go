@@ -8,7 +8,7 @@
   background-color: $alt-light-grey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 31px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,7 +21,6 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: transparent;
 }
 
 .range__bar-wrapper {

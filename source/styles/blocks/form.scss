@@ -48,19 +48,15 @@
 }
 
 .form__range {
-  padding-top: 10px;
+  padding-top: 8px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 11px;
-  }
-
-  @media (min-width: $desktop-width) {
     padding-top: 10px;
   }
 }
 
 .form__buttons {
-  margin-top: 29px;
+  margin-top: 30px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;

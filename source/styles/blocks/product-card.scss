@@ -87,18 +87,20 @@
     &--promo {
       flex-direction: row;
       column-gap: 30px;
-      padding: 19px 40px 79px 65px;
+      align-items: start;
+      padding: 30px 40px 77px 65px;
 
       .product-card__image-wrapper {
         order: 1;
         width: 600px;
-        margin-top: 9px;
+        margin-top: 0;
       }
 
       .product-card__info {
         order: 2;
         width: 625px;
         align-items: start;
+        margin-top: 150px;
         margin-bottom: 0;
       }
 
@@ -113,8 +115,7 @@
       }
 
       .product-card__footer {
-        margin: 0;
-        margin-top: 40px;
+        margin: 40px 0 35px;
       }
     }
   }
@@ -140,6 +141,7 @@
   padding: 20px;
   padding-top: 0;
   flex-grow: 1;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     padding: 30px;
