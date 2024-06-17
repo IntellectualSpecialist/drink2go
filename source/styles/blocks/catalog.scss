@@ -43,7 +43,7 @@
 
 .catalog__sorting-wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   margin-bottom: 15px;
 
@@ -56,6 +56,14 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 29px;
+  }
+}
+
+.catalog__sorting-label {
+  margin-top: 4px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }
 

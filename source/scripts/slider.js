@@ -63,6 +63,7 @@ const registerSliderPaginationEvents = () => {
 };
 
 const initSlider = () => {
+  updateSlider();
   registerSliderPaginationEvents();
   registerSLiderButtonsEvents();
 };
