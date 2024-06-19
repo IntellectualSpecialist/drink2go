@@ -45,9 +45,9 @@
     }
 
     .product-card__footer {
-      justify-content: center;
+      justify-content: left;
       gap: 20px;
-      width: 230px;
+      width: fit-content;
       margin: 20px auto 0;
     }
 
@@ -112,7 +112,6 @@
       }
 
       .product-card__footer {
-        width: fit-content;
         margin: 0;
         margin-top: 40px;
       }
