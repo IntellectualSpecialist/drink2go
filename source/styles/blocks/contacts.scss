@@ -36,6 +36,8 @@
 }
 
 .contacts__contact--phone {
+  transition: 0.2s ease-in;
+
   &:hover,
   &:focus {
     color: $alt-primary-lighter;
