@@ -58,6 +58,16 @@
     color: $base-white;
     background-color: $alt-light-grey;
     pointer-events: none;
+
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &--secondary-disabled[href] {
+    &::before {
+      background-color: $base-white;
+    }
   }
 
   &--icon {
