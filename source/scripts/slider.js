@@ -52,14 +52,12 @@ const registerSLiderButtonsEvents = () => {
 };
 
 const registerSliderPaginationEvents = () => {
-  if (paginationButtonsElements) {
-    paginationButtonsElements.forEach((button, index) => {
-      button.addEventListener('click', () => {
-        slideIndex = index;
-        updateSlider();
-      });
+  paginationButtonsElements.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      slideIndex = index;
+      updateSlider();
     });
-  }
+  });
 };
 
 const initSlider = () => {

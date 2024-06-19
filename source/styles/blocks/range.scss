@@ -7,6 +7,18 @@
   padding: 0 24px;
   background-color: $alt-light-grey;
 
+  &[disabled] {
+    .range__bar {
+      background-color: $base-grey;
+    }
+
+    .range__toggle {
+      background-color: $bg-lightest-grey;
+      border-color: $base-grey;
+      pointer-events: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
   }

@@ -30,6 +30,11 @@
     color: $base-white;
   }
 
+  &--primary-disabled {
+    background-color: $base-grey;
+    pointer-events: none;
+  }
+
   &--secondary {
     background-color: $base-white;
     color: $base-primary;
@@ -47,6 +52,12 @@
       color: $base-white;
       background-color: $alt-light-grey;
     }
+  }
+
+  &--secondary-disabled {
+    color: $base-white;
+    background-color: $alt-light-grey;
+    pointer-events: none;
   }
 
   &--icon {

@@ -68,4 +68,8 @@ const initNoUiSlider = () => {
   }
 };
 
-export { initNoUiSlider };
+const disableSlider = () => {
+  sliderElement.setAttribute('disabled', true);
+};
+
+export { initNoUiSlider, disableSlider };
