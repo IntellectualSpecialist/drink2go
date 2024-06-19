@@ -87,10 +87,10 @@
 
 .main-footer__title {
   margin-bottom: 12px;
-}
 
-.main-footer__title--contacts {
-  margin-bottom: 20px;
+  &--contacts {
+    margin-bottom: 20px;
+  }
 }
 
 .main-footer__navigation-item {
