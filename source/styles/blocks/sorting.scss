@@ -26,6 +26,12 @@
     }
   }
 
+  &:has(.sorting__control:focus) {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
   &:has(.sorting__control:active) {
     .sorting__control {
       background-color: transparent;
